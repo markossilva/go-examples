@@ -1,3 +1,3 @@
-module github.com/markossilva/go-examples/go-routines
+module goroutines
 
 go 1.22.6

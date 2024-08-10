@@ -1,3 +1,6 @@
 go 1.22.6
 
-use ./go-routines
+use (
+	.
+	./go-routines
+)

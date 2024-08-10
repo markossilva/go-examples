@@ -1,8 +1,7 @@
 package main
 
-import goroutines "github.com/markossilva/go-routines/goroutines"
+import "goroutines"
 
 func main() {
-	// goroutines.Channels()
-	goroutines.Channels()
+	goroutines.Channels(10000, 100000)
 }

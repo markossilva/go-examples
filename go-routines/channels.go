@@ -9,16 +9,14 @@ func someTask(id int, data chan int) {
 	}
 }
 
-func Channels() {
+func Channels(numWorkers, numExecutions int) {
 	channel := make(chan int)
 
-	// Creating 10.000 workers to execute the task
-	for i := 0; i < 10000; i++ {
+	for i := 0; i < numWorkers; i++ {
 		go someTask(i, channel)
 	}
 
-	// Filling channel with 100.000 numbers to be executed
-	for i := 0; i < 100000; i++ {
+	for i := 0; i < numExecutions; i++ {
 		channel <- i
 	}
 }
